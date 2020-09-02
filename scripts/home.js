@@ -7,13 +7,18 @@ homeTemplate.innerHTML = `
         background-position: top center; 
         background-repeat: no-repeat;
         background-size: cover;
-        postion: relative
+        position: relative
     }
     .home-section .content {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+    }
+    .home-section .username{
+        position:absolute;
+        bottom: 0;
+        right: 5px;
     }
     .home-section .content p{
         text-align: center;
@@ -45,6 +50,9 @@ homeTemplate.innerHTML = `
         color: #313335;
         font-size: 60px;
     }
+    .home-section .username p{
+        font-size: 24px;
+    }
     </style>
     <div class='section home-section'>
         <div class='content'>
@@ -57,6 +65,11 @@ homeTemplate.innerHTML = `
             <div>
                 View more
             </div>
+        </div>
+        <div class='username'>
+            <p class='label'>
+                <b>Username:</b> <i class='id'>ialihaider75</i>
+            </p>
         </div>
     </div>`;
 export class Home extends HTMLElement {
