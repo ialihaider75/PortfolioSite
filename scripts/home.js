@@ -3,7 +3,7 @@ homeTemplate.innerHTML = `
     <style>
     @import '../styles/style.css';
     .home-section {
-        background-image: url('../images/bg-1.jpg');
+        background-image: url('images/bg-1.jpg');
         background-position: top center; 
         background-repeat: no-repeat;
         background-size: cover;
