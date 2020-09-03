@@ -1,7 +1,7 @@
 const homeTemplate = document.createElement('template');
 homeTemplate.innerHTML = `
     <style>
-    @import '../styles/style.css';
+    @import 'styles/style.css';
     .home-section {
         background-image: url('images/bg-1.jpg');
         background-position: top center; 
@@ -32,7 +32,7 @@ homeTemplate.innerHTML = `
     .home-section .content div{
         text-align: center;
         margin-top: 15px;
-        border: 2px solid black;
+        border: 1px solid black;
         background-color: rgba(0,0,0,0.1);
         font-size: 20px;
         box-shadow: 3px 3px 5px 6px rgba(0,0,0,0.2);
@@ -40,7 +40,7 @@ homeTemplate.innerHTML = `
         transition: transform 1s;
     }
     .home-section .content div:hover {
-        transform: scale(1.2);
+        transform: scale(1.1);
     }
     .home-section .content p .name{
         color: #A2A6A6;
@@ -60,7 +60,7 @@ homeTemplate.innerHTML = `
                 Hi, I'm <span class='name'>Ali Haider</span><span class='period'>.</span>
             </p>
             <p>
-                I'm a full stack engineer<span class='period'>.</span>
+                I'm a &ldquo;full stack engineer&rdquo;<span class='period'>.</span>
             </p>
             <div>
                 View more
