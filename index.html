@@ -15,8 +15,25 @@
 <body>
     <script type="module" src="scripts/home.js"></script>
     <script type="module" src="scripts/navigation-bar.js"></script>
+    <script type="module" src="scripts/skill-card.js"></script>
     <nav-bar></nav-bar>
     <my-home></my-home>
+    <div class="section">
+        <div class="header">
+            <h1>
+                ABOUT
+            </h1>
+            <span class="border">
+            </span>
+        </div>
+
+        <div class="skills-container clearfix">
+            <skill-card header="Developer" avatar="images/developer.png" class="skill-card"></skill-card>
+            <skill-card header="Algorithmist" avatar="images/algorithmist.png" class="skill-card"></skill-card>
+            <skill-card header="AI enthusiat" avatar="images/ai-enthusiat.png" class="skill-card"></skill-card>
+            <skill-card header="Data Scientist" avatar="images/data-scientist.png" class="skill-card"></skill-card>
+        </div>
+    </div>
 </body>
 
 </html>

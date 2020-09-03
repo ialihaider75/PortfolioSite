@@ -24,6 +24,7 @@ navigationBarTemplate.innerHTML = `
             padding: 8px;
             color: black;
             font-size: 20px;
+            font-weight: bold;
             margin-right: 5px;
             transition: transform 1s;
         }
