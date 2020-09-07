@@ -3,14 +3,22 @@ skillCardTemplate.innerHTML = `
 
     <style>
         .card{
-            width: 300px;
+            
         }
         .card .card-header{
             text-align: center;
         }
+        .card .card-header .content{
+            font-weight: bold;
+        }
         .card .card-header img {
+            display: block;
+            margin: auto;
             width: 100px;
             height: 100px;
+        }
+        .card .card-body{
+            text-align: center;
         }
     </style>
 
@@ -38,6 +46,7 @@ class SkillCard extends HTMLElement {
         this.shadowRoot.appendChild(skillCardTemplate.content.cloneNode(true));
         this.shadowRoot.querySelector(".card .card-header .content").innerHTML = this.getAttribute("header");
         this.shadowRoot.querySelector(".card .card-header .card-avater").setAttribute("src", this.getAttribute("avatar"));
+        this.shadowRoot.querySelector(".card .card-body .content").innerText = this.getAttribute("text");
     }
 }
 
