@@ -16,26 +16,25 @@ navigationBarTemplate.innerHTML = `
         }
         nav ul li{
             display: inline;
+            float: left;
         }
         nav ul li a{
             display: block;
             text-decoration: none;
-            float: left;
             padding: 8px;
             color: black;
             font-size: 20px;
             font-weight: bold;
-            margin-right: 5px;
             transition: transform 1s;
         }
         nav ul li a:hover{
             transform: scale(1.1);
         }
-        nav ul li a img{
-            height: 50px;
-            width: 50px;
+        nav span a img{
+            height: 25px;
+            width: 25x;
         }
-        nav ul .menu-btn{
+        nav .menu-btn{
             display: none;
         }
         nav div{
@@ -49,32 +48,25 @@ navigationBarTemplate.innerHTML = `
             nav {
                 background-color: #A2A6A6;
             }
-            nav ul li {
+            nav ul {
+                text-align: center;
                 display: none;
             }
-            nav ul .menu-btn{ 
-                display: inline-block;
-            }
-            nav ul li a{
-                display: block;
-                text-decoration: none;
+            nav ul li{
                 float: none;
-                padding: 8px;
-                color: black;
-                font-size: 20px;
-                font-weight: bold;
-                margin-right: 5px;
-                transition: transform 1s;
+            }
+            nav .menu-btn{ 
+                display: inline-block;
             }
           }
     </style>
     <nav>
+        <span class='menu-btn'>
+            <a>
+                <img src='images/menu.png'>
+            </a>
+        </span>  
         <ul class='clearfix'>
-            <li class='menu-btn'>
-                <a href ="#">
-                    <img src='images/menu.png'>
-                </a>
-            </li>
             <li> 
                 <a href="#">Home</a> 
             </li>
@@ -111,9 +103,11 @@ class NavigationBar extends HTMLElement {
 window.customElements.define('nav-bar', NavigationBar);
 
 function show(obj) {
-    if (obj.style.display == 'none') {
+    if (obj.style.display === 'none') {
+        console.log("Hi");
         obj.style.display = 'block';
     } else {
+        console.log("HI here");
         obj.style.display = 'none';
     }
 }
