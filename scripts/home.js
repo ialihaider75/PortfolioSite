@@ -62,7 +62,7 @@ homeTemplate.innerHTML = `
             <p>
                 I'm a &ldquo;full stack engineer&rdquo;<span class='period'>.</span>
             </p>
-            <div>
+            <div class='view-more-btn'>
                 View more
             </div>
         </div>
@@ -79,7 +79,14 @@ export class Home extends HTMLElement {
             mode: 'open'
         });
         this.shadowRoot.appendChild(homeTemplate.content.cloneNode(true));
+        this.shadowRoot.querySelector(".view-more-btn").addEventListener('click', function () {
+            moveToABout();
+        });
     }
 
 }
 window.customElements.define('my-home', Home);
+
+function moveToABout() {
+    window.location = "#about";
+}
