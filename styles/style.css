@@ -40,4 +40,33 @@ body {
 
 .profile {
     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(19em, 1fr));
+    grid-gap: 2rem;
+}
+
+
+.profile .photo .bio {
+    margin: auto;
+    text-align: center;
+    width: 70%;
+}
+
+
+.profile .photo .avatar img {
+    display: block;
+    height: 240px;
+    width: 250px;
+    border-radius: 160px;
+    margin: auto;
+}
+
+.bio a {
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.bio .city {
+    color: #838888;
+    font-weight: bolder;
 }
